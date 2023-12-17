@@ -7,9 +7,14 @@ const config: Config = {
         "./app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
+        container: {
+            center: true,
+        },
         extend: {
             backgroundImage: {
                 "first-block": 'url("/images/first-block3.jpg")',
+                "about-us-block": 'url("/images/about-us.jpg")',
+
                 "gradient-conic":
                     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
             },

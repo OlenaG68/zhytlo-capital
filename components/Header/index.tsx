@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../UI/Button";
 
 const Header = () => {
     return (
@@ -23,11 +24,8 @@ const Header = () => {
                         </div>
                         <div className="w-6 h-6 relative"></div>
                     </div>
-                    <div className="w-[94px] px-6 py-3 bg-sky-500 rounded-lg shadow justify-center items-center gap-2.5 flex">
-                        <div className="text-white text-sm font-semibold  leading-tight">
-                            Зв&apos;язатися
-                        </div>
-                    </div>
+
+                    <Button title="Зв`язатися" />
                 </div>
             </div>
         </nav>

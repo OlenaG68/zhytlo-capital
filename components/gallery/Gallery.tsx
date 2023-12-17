@@ -54,8 +54,11 @@ const Gallery = () => {
         },
     ];
     return (
-        <div className=" mt-16">
-            <FilterBtn />
+        <div className="container mt-16 mb-16">
+            <div className="flex justify-center">
+                <FilterBtn />
+            </div>
+
             <div className="flex justify-center flex-wrap gap-4 mt-8">
                 {cadrs.map((card) => (
                     <Card card={card} key={card.id} />

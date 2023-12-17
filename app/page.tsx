@@ -1,3 +1,5 @@
+import AboutUs from "@/components/AboutUs";
+import ContactForm from "@/components/ContactForm";
 import FirstBlock from "@/components/FirstBlock";
 import Gallery from "@/components/gallery/Gallery";
 
@@ -6,6 +8,8 @@ export default function Home() {
         <main className="">
             <FirstBlock />
             <Gallery />
+            <AboutUs />
+            <ContactForm />
         </main>
     );
 }
