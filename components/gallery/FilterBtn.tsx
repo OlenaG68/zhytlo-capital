@@ -8,7 +8,7 @@ const FilterBtn = () => {
         { title: "2 Room", id: 1, slug: "two-rooms" },
     ];
     return (
-        <div className="flex gap-6">
+        <div className="pl-[135px] flex gap-6">
             {filterBtn.map((btn) => (
                 <div
                     key={btn.id}
