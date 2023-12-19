@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
     return (
         <div>
-            <div className="container flex justify-between py-16">
+            <div className="container flex flex-wrap flex-col gap-20 md:gap-0 md:flex-row justify-between py-16">
                 <div className="max-w-[313px]">
                     <div>Logo</div>
                     <div className="mt-4 text-neutral-50 text-base font-normal">

@@ -20,12 +20,12 @@ const AboutUs = () => {
         },
     ];
     return (
-        <div className=" bg-about-us-block bg-cover bg-no-repeat  relative">
+        <div className=" bg-about-us-block bg-cover bg-center bg-no-repeat  relative">
             <div className="w-full h-full bg-black bg-opacity-75 absolute"></div>
-            <div className="container flex items-center justify-between py-[137px]">
-                <div className="flex flex-col gap-4 max-w-[666px] relative z-20">
+            <div className="container flex flex-col md:flex-row gap-20 items-center justify-between py-[137px]">
+                <div className="flex flex-col gap-4 px-3 md:px-0 max-w-[666px] relative z-20 justify-center items-center md:items-start text-center md:text-left">
                     <div className="text-sky-500 text-[32px] font-semibold">
-                        Title
+                        About us
                     </div>
                     <div className=" text-neutral-50 text-base font-normal mb-">
                         Homeverse.io is a gated community with a great location.
@@ -35,7 +35,7 @@ const AboutUs = () => {
                         freeways, buses and trolleys. . Laundry is available on
                         premises.
                     </div>
-                    <Button title="Читати більше" />
+                    <Button title="Читати більше" className=" mt-9 md:mt-0" />
                 </div>
                 <div className="flex flex-col relative z-20 gap-12">
                     {advantages.map((item, index) => (

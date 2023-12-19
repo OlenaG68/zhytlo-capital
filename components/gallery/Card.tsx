@@ -14,8 +14,8 @@ interface ICard {
 
 const Card = ({ card }: ICard) => {
     return (
-        <div className="max-w-[577px] max-h-[582px] bg-neutral-900  rounded-lg ">
-            <div className="relative">
+        <div className="max-w-[577px]  bg-neutral-900  rounded-lg ">
+            <div className="relative z-10">
                 <Image
                     src={card.image}
                     width={577}
@@ -23,14 +23,10 @@ const Card = ({ card }: ICard) => {
                     alt="image"
                     className=" rounded-lg overflow-hidden"
                 />
-                <div className="w-[60px] h-full left-[517px] top-0 absolute">
-                    <div className="w-[60px] h-full left-0 top-0 absolute bg-black bg-opacity-30 rounded-tr-lg rounded-br-lg" />
-                    <div className="w-6 h-6 left-[42px] top-[213px] absolute origin-top-left rotate-180" />
-                </div>
-                <div className="w-[60px] h-full left-0 top-0 absolute">
-                    <div className="w-[60px] h-full left-0 top-0 absolute bg-black bg-opacity-30 rounded-tl-lg rounded-bl-lg" />
-                    <div className="w-6 h-6 left-[18px] top-[237px] absolute" />
-                </div>
+
+                <div className="w-[60px] h-full left-0 top-0 absolute bg-black bg-opacity-30 rounded-tr-lg rounded-br-lg" />
+
+                <div className="w-[60px] h-full right-0 top-0 absolute bg-black bg-opacity-30 rounded-tl-lg rounded-bl-lg" />
             </div>
 
             <div className="flex justify-between px-[15px] mt-4 items-center">
@@ -41,7 +37,7 @@ const Card = ({ card }: ICard) => {
                     View Details
                 </div>
             </div>
-            <div className="mx-[15px] grid grid-cols-3  divide-x rounded-lg border border-neutral-50 border-opacity-30 mt-4">
+            <div className="mx-[15px] grid grid-cols-3  divide-x rounded-lg border border-neutral-50 border-opacity-30 my-4">
                 <div className="flex justify-center gap-1 py-3">
                     <div>{card.room.icon}</div>
                     <div>{card.room.title}</div>

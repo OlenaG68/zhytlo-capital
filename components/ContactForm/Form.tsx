@@ -3,15 +3,15 @@ import React from "react";
 const Form = () => {
     return (
         <form className="flex flex-col gap-16">
-            <div className="flex gap-4">
+            <div className="flex flex-col md:flex-row gap-16 md:gap-4 w-full">
                 <input
                     type="text"
-                    className="bg-transparent border-b border-white outline-none"
+                    className="bg-transparent border-b w-full border-white outline-none"
                     placeholder="First name"
                 />
                 <input
                     type="text"
-                    className="bg-transparent border-b border-white outline-none"
+                    className="bg-transparent border-b w-full border-white outline-none"
                     placeholder="Last name"
                 />
             </div>
@@ -23,7 +23,7 @@ const Form = () => {
             <input
                 type="text"
                 className="bg-transparent border-b border-white outline-none"
-                placeholder="Mail"
+                placeholder="E-mail"
             />
             <input
                 type="text"
