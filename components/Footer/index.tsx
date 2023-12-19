@@ -30,7 +30,7 @@ const Footer = () => {
                     <div className="text-white text-2xl font-semibold">
                         Follow Us
                     </div>
-                    <div className="flex gap-14 mt-4">
+                    <div className="flex text-white gap-14 mt-4">
                         <div>Inst</div>
                         <div>FB</div>
                         <div>T</div>
