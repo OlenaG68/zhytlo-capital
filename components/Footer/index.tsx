@@ -37,8 +37,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className=" text-center pt-8 pb-16 border-t border-neutral-50 border-opacity-30">
-                © 2022 Dandelion | All Rights Reserved
+            <div className=" text-center pt-8 pb-16 border-t text-white border-neutral-50 border-opacity-30">
+                © 2022 WebDes | All Rights Reserved
             </div>
         </div>
     );
