@@ -4,7 +4,7 @@ import Link from "next/link";
 const Map = () => {
     return (
         <div className="pt-[150px] pb-[50px] px-3 ">
-            <div className="text-white text-4xl  text-center mb-10   ">
+            <div className="text-white text-lg md:text-4xl  text-center mb-10   ">
                 <span className="text-sky-500 text-3xl md:text-[54px]  font-bold">
                     SUMMERSTONE VILLAGE
                 </span>{" "}
