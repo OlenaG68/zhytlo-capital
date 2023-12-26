@@ -5,7 +5,7 @@ const Map = () => {
     return (
         <div className="pt-[150px] pb-[50px] px-3 ">
             <div className="text-white text-4xl  text-center mb-10   ">
-                <span className="text-sky-500 text-5xl md:text-[54px]  font-bold">
+                <span className="text-sky-500 text-3xl md:text-[54px]  font-bold">
                     SUMMERSTONE VILLAGE
                 </span>{" "}
                 <br /> на карті

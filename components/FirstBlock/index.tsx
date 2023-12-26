@@ -11,7 +11,7 @@ const FirstBlock = () => {
             className="h-screen w-full bg-first-block bg-cover bg-no-repeat bg-center flex items-start pt-32 md:items-center md:pt-0"
         >
             <div className="container pl-5 md:pl-0">
-                <div className=" text-5xl text-center md:text-left md:text-[64px] max-w-[859px] font-bold leading-snug  text-neutral-50">
+                <div className=" text-3xl text-center md:text-left md:text-[64px] max-w-[859px] font-bold leading-snug  text-neutral-50">
                     <TypeAnimation
                         sequence={[
                             "Знайди житло своєї мрії у", // Types 'One'
