@@ -7,30 +7,63 @@ import { scrollElementToView } from "@/helpers/scrollElementToView";
 import useClickOutside from "@/helpers/useClickOutside";
 
 const Header = () => {
-    const [activeLink, setActiveLink] = useState(1);
+    // const [activeLink, setActiveLink] = useState(1);
     const [openMobMenu, setOpenMobMenu] = useState(false);
     const [navBg, setNavBg] = useState(false);
     const mobMenuRef = useRef<HTMLDivElement>(null);
-    const changeNavBg = () => {
-        window.scrollY >= 500 ? setNavBg(true) : setNavBg(false);
-    };
+
     const navLink = [
         { title: "Головна", id: 1, slug: "home" },
         { title: "Квартири", id: 2, slug: "gallery" },
         { title: "Про нас", id: 3, slug: "about-us" },
         { title: "Контакти", id: 4, slug: "contact" },
     ];
+
+    const [activeTab, setActiveTab] = useState(navLink[0].slug);
     const chooseLink = (id: number, slug: string) => {
-        setActiveLink(id);
+        setActiveTab(slug);
         scrollElementToView(slug);
         setOpenMobMenu(false);
     };
+    const checkVisibleBlock = () => {
+        window.scrollY >= 500 ? setNavBg(true) : setNavBg(false);
+        navLink.forEach((tab) => {
+            const element = document.getElementById(tab.slug);
+            if (!element) return;
+
+            const rect = element.getBoundingClientRect();
+            const isVisible =
+                rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+            if (isVisible) {
+                const findedTab = navLink.find(
+                    (tabMain) => tabMain.slug === tab.slug
+                );
+
+                if (!findedTab) {
+                    return;
+                }
+
+                setActiveTab(findedTab.slug);
+
+                return;
+            }
+        });
+    };
+    console.log(activeTab);
     useEffect(() => {
-        window.addEventListener("scroll", changeNavBg);
+        window.addEventListener("scroll", checkVisibleBlock);
+
         return () => {
-            window.removeEventListener("scroll", changeNavBg);
+            window.removeEventListener("scroll", checkVisibleBlock);
         };
     }, []);
+    // useEffect(() => {
+    //     window.addEventListener("scroll", changeNavBg);
+    //     return () => {
+    //         window.removeEventListener("scroll", changeNavBg);
+    //     };
+    // }, []);
     useClickOutside(mobMenuRef, () => setOpenMobMenu(false));
     return (
         <nav
@@ -49,7 +82,7 @@ const Header = () => {
                             >
                                 {link.title}
                             </div>
-                            {link.id === activeLink && (
+                            {link.slug === activeTab && (
                                 <div className="w-2 h-2 rounded-full top-5 left-1/2 -translate-x-1/2 absolute bg-[#1DAEFF]" />
                             )}
                         </div>
@@ -75,7 +108,7 @@ const Header = () => {
                                     >
                                         {link.title}
                                     </div>
-                                    {link.id === activeLink && (
+                                    {link.slug === activeTab && (
                                         <div className="w-2 h-2 rounded-full top-5 left-1/2 -translate-x-1/2 absolute bg-[#1DAEFF]" />
                                     )}
                                 </div>

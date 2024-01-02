@@ -54,8 +54,8 @@ const Gallery = () => {
         },
     ];
     return (
-        <div id="gallery" className="container pt-16 mb-16">
-            <div className="flex  justify-center">
+        <div className="container pb-16">
+            <div id="gallery" className="pt-32 flex  justify-center">
                 <FilterBtn />
             </div>
 

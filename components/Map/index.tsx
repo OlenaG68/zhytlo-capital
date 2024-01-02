@@ -7,7 +7,7 @@ const Map = () => {
             <div className="text-white text-lg md:text-4xl  text-center mb-10   ">
                 <span className="text-sky-500 text-3xl md:text-[54px]  font-bold">
                     SUMMERSTONE VILLAGE
-                </span>{" "}
+                </span>
                 <br /> на карті
             </div>
             <Link href="#">
@@ -16,7 +16,7 @@ const Map = () => {
                     width={1177}
                     height={556}
                     alt="image"
-                    className=" hover:scale-105 transition ease-in-out  rounded-lg overflow-hidden m-auto "
+                    className="rounded-lg overflow-hidden m-auto "
                 />
             </Link>
         </div>

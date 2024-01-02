@@ -1,0 +1,10 @@
+.slick-slide div {
+    width: 90%; /* Або будь-яке інше значення ширини, яке вам подобається */
+    transition: all 0.5s ease;
+    margin: 0 auto;
+  }
+  
+  .slick-slide.slick-center div {
+    transform: scale(1.1); /* Збільште центральний слайд на повну ширину контейнера */
+  }
+//   .slick-slide.slick-center img { margin-left: auto; margin-right: auto; }
