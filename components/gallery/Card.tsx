@@ -18,7 +18,7 @@ interface ICard {
 const Card = ({ card }: ICard) => {
     return (
         <Fade duration={700} cascade damping={0.1}>
-            <div className="max-w-[577px]  bg-neutral-900  rounded-lg ">
+            <div className="max-w-[577px] pb-3  bg-neutral-900  rounded-lg ">
                 <div className="relative z-10">
                     <Image
                         src={card.image}
