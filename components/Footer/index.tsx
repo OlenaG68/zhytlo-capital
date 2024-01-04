@@ -2,14 +2,23 @@ import React from "react";
 import Phone from "../Icons/Phone";
 import Mail from "../Icons/Mail";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
     return (
         <div>
-            <div className="container md:px-0 px-3 flex flex-wrap flex-col gap-20 md:gap-0 md:flex-row justify-between py-16">
+            <div className="container md:px-0 px-3 flex flex-wrap flex-col items-center gap-20 md:gap-0 md:flex-row justify-between py-16">
                 <div className="max-w-[513px]">
-                    <div className="text-white">Logo</div>
-                    <div className="mt-4 text-neutral-50 text-base font-normal">
+                    <div className="text-white">
+                        <Image
+                            src="/logo/logo1.png"
+                            width={180}
+                            height={160}
+                            alt="logo"
+                            className="m-auto"
+                        />
+                    </div>
+                    <div className="mt-8 text-neutral-50 text-base font-normal">
                         «ЖИТЛО КАПІТАЛ» - будівельна компанія, яка працює над
                         створенням надійного, стильного та продуманого до
                         деталей житла. Ми використовуємо лише якісні та

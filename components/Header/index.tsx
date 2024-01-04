@@ -5,9 +5,9 @@ import MobMenu from "../Icons/MobMenu";
 import Close from "../Icons/Close";
 import { scrollElementToView } from "@/helpers/scrollElementToView";
 import useClickOutside from "@/helpers/useClickOutside";
+import Image from "next/image";
 
 const Header = () => {
-    // const [activeLink, setActiveLink] = useState(1);
     const [openMobMenu, setOpenMobMenu] = useState(false);
     const [navBg, setNavBg] = useState(false);
     const mobMenuRef = useRef<HTMLDivElement>(null);
@@ -50,7 +50,7 @@ const Header = () => {
             }
         });
     };
-    console.log(activeTab);
+
     useEffect(() => {
         window.addEventListener("scroll", checkVisibleBlock);
 
@@ -58,12 +58,7 @@ const Header = () => {
             window.removeEventListener("scroll", checkVisibleBlock);
         };
     }, []);
-    // useEffect(() => {
-    //     window.addEventListener("scroll", changeNavBg);
-    //     return () => {
-    //         window.removeEventListener("scroll", changeNavBg);
-    //     };
-    // }, []);
+
     useClickOutside(mobMenuRef, () => setOpenMobMenu(false));
     return (
         <nav
@@ -72,7 +67,14 @@ const Header = () => {
             }`}
         >
             <div className=" w-full py-4 justify-between items-center inline-flex ">
-                <div className=" text-white">Логотип</div>
+                <div className=" text-white">
+                    <Image
+                        src="/logo/logo.png"
+                        width={80}
+                        height={60}
+                        alt="logo"
+                    />
+                </div>
                 <div className="h-[42px] gap-[49px] justify-between items-center  hidden md:flex">
                     {navLink.map((link) => (
                         <div key={link.id} className="relative">

@@ -6,7 +6,7 @@ const ContactForm = () => {
     return (
         <div
             id="contact"
-            className="container px-3 flex flex-col lg:flex-row justify-between py-[80px] md:py-[150px] gap-20 lg:gap-7"
+            className="container px-3 flex flex-col lg:flex-row justify-between py-[80px] md:pb-[100px] md:pt-[160px] gap-20 lg:gap-7"
         >
             <Fade direction="down">
                 <div className="max-w-[700px]">
