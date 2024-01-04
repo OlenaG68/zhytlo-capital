@@ -33,7 +33,7 @@ const Card = ({ card }: ICard) => {
         adaptiveHeight: true,
         centerMode: true, // Add this line
         centerPadding: "0px",
-        arrows: windowSize.width! > 1023 ? true : false,
+        // arrows: windowSize.width! > 1023 ? true : false,
     };
     return (
         <Fade duration={700} cascade damping={0.1}>
