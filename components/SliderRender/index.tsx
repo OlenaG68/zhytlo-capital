@@ -19,6 +19,7 @@ const SliderRender = () => {
         speed: 500,
         variableWidth: windowSize.width! > 927 ? true : false,
         arrows: windowSize.width! > 1023 ? true : false,
+        dots: windowSize.width! > 1023 ? false : true,
     };
     return (
         <div className="w-[90%] m-auto  lg:pt-16 pb-28">

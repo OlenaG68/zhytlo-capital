@@ -7,6 +7,19 @@
   .slick-slide.slick-center div {
     transform: scale(1.1); /* Збільште центральний слайд на повну ширину контейнера */
   }
+  .slick-dots li button{
+    color: white;
+    opacity: 1;
+  }
+  .slick-dots li button:before{
+    color: white !important;
+  }
+  .slick-dots {
+  bottom: 30px;
+  }
+  .slick-dots li.slick-active button:before {
+    color: white;
+  }
 //   .slick-slide.slick-center img { margin-left: auto; margin-right: auto; }
 
 .gallery-card{
