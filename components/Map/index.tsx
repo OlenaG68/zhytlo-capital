@@ -10,7 +10,10 @@ const Map = () => {
                 </span>
                 <br /> на карті
             </div>
-            <Link href="#">
+            <Link
+                href="https://maps.app.goo.gl/EBRbokNCZeKoSeEi7?g_st=iv"
+                target="_blank"
+            >
                 <Image
                     src="/images/maps1.png"
                     width={1177}
