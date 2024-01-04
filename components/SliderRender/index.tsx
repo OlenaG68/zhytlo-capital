@@ -18,12 +18,13 @@ const SliderRender = () => {
         slidesToShow: 1,
         speed: 500,
         variableWidth: windowSize.width! > 927 ? true : false,
+        arrows: windowSize.width! > 1023 ? true : false,
     };
     return (
-        <div className="w-[90%] m-auto px-2 lg:pt-16 pb-28">
+        <div className="w-[90%] m-auto  lg:pt-16 pb-28">
             <Slider {...settings}>
                 {[1, 2, 4, 5].map((slideIndex) => (
-                    <div key={slideIndex} className="py-24 px-4 md:px-8">
+                    <div key={slideIndex} className="py-24 px-4 lg:px-8">
                         <Image
                             src={`/images/renders/${slideIndex}.jpg`}
                             width={750}
