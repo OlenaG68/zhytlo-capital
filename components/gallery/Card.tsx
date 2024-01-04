@@ -8,8 +8,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import useWindowSize from "@/helpers/useWindowSize";
+import { IPopupProps } from "@/store/popup/popup.props";
+import { ConnectedProps, connect } from "react-redux";
 
-interface ICard {
+interface ICard extends PropsFromRedux {
     card: {
         price: string;
         images: string[] | null;
@@ -20,7 +22,7 @@ interface ICard {
     };
 }
 
-const Card = ({ card }: ICard) => {
+const Card = ({ card, openPopup }: ICard) => {
     const windowSize = useWindowSize();
     const settings = {
         className: "slick-track",
@@ -43,7 +45,7 @@ const Card = ({ card }: ICard) => {
                         {card.images?.map((image, index) => (
                             <div
                                 key={index}
-                                className=" px-7 py-4 md:px-0 md:py-0"
+                                className=" px-7 py-4  lg:px-10 lg:py-8 "
                             >
                                 <Image
                                     src={image}
@@ -57,16 +59,19 @@ const Card = ({ card }: ICard) => {
                         ))}
                     </Slider>
 
-                    <div className="hidden lg:block w-[60px] h-full left-0 top-0 absolute bg-black bg-opacity-30 rounded-tr-lg rounded-br-lg" />
+                    <div className="hidden lg:block w-[60px] h-[98%] left-0 top-0 absolute bg-black bg-opacity-30 rounded-tr-lg rounded-br-lg" />
 
-                    <div className="hidden lg:block w-[60px] h-full right-0 top-0 absolute bg-black bg-opacity-30 rounded-tl-lg rounded-bl-lg" />
+                    <div className="hidden lg:block w-[60px] h-[98%] right-0 top-0 absolute bg-black bg-opacity-30 rounded-tl-lg rounded-bl-lg" />
                 </div>
 
                 <div className="flex justify-between px-[15px] mt-4 items-center">
                     <div className="text-neutral-50 text-2xl font-semibold ">
                         {card.price}
                     </div>
-                    <div className=" cursor-pointer text-white hover:from-orange-400 hover:to-purple-600 hover:scale-110 transition ease-in-out px-6 py-3 bg-gradient-to-r from-orange-300 to-purple-500 rounded-lg shadow justify-center items-center gap-2.5 inline-flex">
+                    <div
+                        onClick={() => openPopup("details")}
+                        className=" cursor-pointer text-white hover:from-orange-400 hover:to-purple-600 hover:scale-110 transition ease-in-out px-6 py-3 bg-gradient-to-r from-orange-300 to-purple-500 rounded-lg shadow justify-center items-center gap-2.5 inline-flex"
+                    >
                         View Details
                     </div>
                 </div>
@@ -92,4 +97,18 @@ const Card = ({ card }: ICard) => {
     );
 };
 
-export default Card;
+const mapState = ({ popup }: { popup: IPopupProps }) => {
+    const { currentPopup } = popup;
+    return { currentPopup };
+};
+
+const mapDispatch = {
+    openPopup: (currentPopup: string) => ({
+        type: "OPEN_POPUP",
+        currentPopup,
+    }),
+};
+
+const connector = connect(mapState, mapDispatch);
+export type PropsFromRedux = ConnectedProps<typeof connector>;
+export default connector(Card);
