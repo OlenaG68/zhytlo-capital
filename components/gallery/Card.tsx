@@ -41,7 +41,10 @@ const Card = ({ card }: ICard) => {
                 <div className="relative z-10 h-fit">
                     <Slider {...settings}>
                         {card.images?.map((image, index) => (
-                            <div key={index}>
+                            <div
+                                key={index}
+                                className=" px-7 py-4 md:px-0 md:py-0"
+                            >
                                 <Image
                                     src={image}
                                     width={557}
