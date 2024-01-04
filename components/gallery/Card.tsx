@@ -70,9 +70,9 @@ const Card = ({ card, openPopup }: ICard) => {
                     </div>
                     <div
                         onClick={() => openPopup("details")}
-                        className=" cursor-pointer text-white hover:from-orange-400 hover:to-purple-600 hover:scale-110 transition ease-in-out px-6 py-3 bg-gradient-to-r from-orange-300 to-purple-500 rounded-lg shadow justify-center items-center gap-2.5 inline-flex"
+                        className=" cursor-pointer font-semibold text-white hover:from-orange-400 hover:to-purple-600 hover:scale-110 transition ease-in-out px-6 py-3 bg-gradient-to-r from-orange-300 to-purple-500 rounded-lg shadow justify-center items-center gap-2.5 inline-flex"
                     >
-                        View Details
+                        Деталі
                     </div>
                 </div>
                 <div className="mx-[15px] grid grid-cols-3 text-white divide-x rounded-lg border border-neutral-50 border-opacity-30 my-4">
