@@ -23,4 +23,11 @@
     font-size: 20px;
     opacity: .3;
   }
+  .slick-track{
+    display: flex;
+  }
+  .slick-slide div {
+    width: 100%; /* Або будь-яке інше значення ширини, яке вам подобається */
+
+  }
 }

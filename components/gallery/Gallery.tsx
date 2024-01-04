@@ -54,12 +54,12 @@ const Gallery = () => {
         },
     ];
     return (
-        <div className="container pb-16">
+        <div className="container px-3 pb-16">
             <div id="gallery" className="pt-32 flex  justify-center">
                 <FilterBtn />
             </div>
 
-            <div className="flex justify-center flex-wrap gap-4 mt-8 px-3 pb-4">
+            <div className="flex justify-center  flex-col md:flex-row md:flex-wrap gap-4 mt-8 pb-4">
                 {cadrs.map((card) => (
                     <Card card={card} key={card.id} />
                 ))}

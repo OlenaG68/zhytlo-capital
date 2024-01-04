@@ -7,11 +7,12 @@ import { Fade } from "react-awesome-reveal";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import useWindowSize from "@/helpers/useWindowSize";
 
 interface ICard {
     card: {
         price: string;
-        images: string[];
+        images: string[] | null;
         id: number;
         room: { title: string; slug: string; icon: string };
         bathRoom: { title: string; slug: string; icon: string };
@@ -20,36 +21,42 @@ interface ICard {
 }
 
 const Card = ({ card }: ICard) => {
+    const windowSize = useWindowSize();
     const settings = {
+        className: "slick-track",
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
+        variableWidth: true,
+        adaptiveHeight: true,
+        centerMode: true, // Add this line
+        centerPadding: "0px",
+        arrows: windowSize.width! > 1023 ? true : false,
     };
     return (
         <Fade duration={700} cascade damping={0.1}>
             <div className="gallery-card max-w-[577px] pb-3  bg-neutral-900  rounded-lg ">
-                <div className="relative z-10">
+                <div className="relative z-10 h-fit">
                     <Slider {...settings}>
-                        {card.images.map((image, index) => (
+                        {card.images?.map((image, index) => (
                             <div key={index}>
                                 <Image
                                     src={image}
-                                    width={1077}
-                                    height={450}
+                                    width={557}
+                                    height={200}
                                     alt="image"
                                     className=" rounded-lg overflow-hidden"
+                                    loading="lazy"
                                 />
                             </div>
                         ))}
                     </Slider>
 
-                    <div className="w-[60px] h-full left-0 top-0 absolute bg-black bg-opacity-30 rounded-tr-lg rounded-br-lg" />
+                    <div className="hidden lg:block w-[60px] h-full left-0 top-0 absolute bg-black bg-opacity-30 rounded-tr-lg rounded-br-lg" />
 
-                    <div className="w-[60px] h-full right-0 top-0 absolute bg-black bg-opacity-30 rounded-tl-lg rounded-bl-lg" />
+                    <div className="hidden lg:block w-[60px] h-full right-0 top-0 absolute bg-black bg-opacity-30 rounded-tl-lg rounded-bl-lg" />
                 </div>
 
                 <div className="flex justify-between px-[15px] mt-4 items-center">

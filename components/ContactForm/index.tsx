@@ -10,13 +10,13 @@ const ContactForm = () => {
         >
             <Fade direction="down">
                 <div className="max-w-[700px]">
-                    <div className="text-neutral-50 text-[48px] lg:text-[55px] font-bold">
+                    <div className="text-neutral-50 text-[35px] lg:text-[55px] font-bold">
                         Знайшли житло своєї мрії в
                         <span className="text-sky-500 ml-3">
                             SUMMERSTONE VILLAGE?
                         </span>
                     </div>
-                    <div className="text-neutral-50 text-opacity-60 text-2xl lg:text-[20px] font-normal leading-9">
+                    <div className="text-neutral-50 text-opacity-60 text-xl lg:text-[20px] font-normal leading-9">
                         Напишіть нам і наш менеджер зконтактує з вами найближчим
                         часом для відповіді на будь-які ваші запитання!
                     </div>
