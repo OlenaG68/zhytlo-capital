@@ -8,3 +8,19 @@
     transform: scale(1.1); /* Збільште центральний слайд на повну ширину контейнера */
   }
 //   .slick-slide.slick-center img { margin-left: auto; margin-right: auto; }
+
+.gallery-card{
+  .slick-prev {
+    left: 14px;
+    z-index: 30;
+  }
+  .slick-next {
+    right: 14px;
+    z-index: 30;
+  }
+  
+  .slick-prev:before, .slick-next:before {
+    font-size: 20px;
+    opacity: .3;
+  }
+}

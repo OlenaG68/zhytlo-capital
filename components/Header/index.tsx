@@ -88,7 +88,7 @@ const Header = () => {
                         </div>
                     ))}
 
-                    <Button title="Зв`язатися" />
+                    <Button title="Напишіть нам!" />
                 </div>
                 <div ref={mobMenuRef} className="block md:hidden">
                     <MobMenu onClick={() => setOpenMobMenu(true)} />
@@ -113,7 +113,7 @@ const Header = () => {
                                     )}
                                 </div>
                             ))}
-                            <Button title="Зв`язатися" />
+                            <Button title="Напишіть нам!" />
                         </div>
                     )}
                 </div>

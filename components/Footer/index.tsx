@@ -1,31 +1,40 @@
 import React from "react";
 import Phone from "../Icons/Phone";
 import Mail from "../Icons/Mail";
+import Link from "next/link";
 
 const Footer = () => {
     return (
         <div>
             <div className="container md:px-0 px-3 flex flex-wrap flex-col gap-20 md:gap-0 md:flex-row justify-between py-16">
-                <div className="max-w-[313px]">
-                    <div>Logo</div>
+                <div className="max-w-[513px]">
+                    <div className="text-white">Logo</div>
                     <div className="mt-4 text-neutral-50 text-base font-normal">
-                        Homeverse.io is a gated community with a great location.
-                        Located downtown, you’re within walking distance of
-                        Parks.
+                        «ЖИТЛО КАПІТАЛ» - будівельна компанія, яка працює над
+                        створенням надійного, стильного та продуманого до
+                        деталей житла. Ми використовуємо лише якісні та
+                        перевірені матеріали, а також сучасні технології та
+                        обладнання.
                     </div>
                 </div>
                 <div>
                     <div className="text-white text-2xl font-semibold">
-                        Contact Us
+                        Наші контакти
                     </div>
-                    <div className="mt-4 text-white text-opacity-80 text-base font-normal ">
+                    {/* <div className="mt-4 text-white text-opacity-80 text-base font-normal ">
                         Deam home villas San Diego, CA, USA
+                    </div> */}
+                    <div className="mt-4 flex gap-3 items-center text-white text-opacity-80 text-base font-normal ">
+                        <Phone />{" "}
+                        <Link href={`tel:+38 097 474 31 86`}>
+                            +38 097 474 31 86
+                        </Link>
                     </div>
                     <div className="mt-4 flex gap-3 items-center text-white text-opacity-80 text-base font-normal ">
-                        <Phone /> <div>025-777-3067</div>
-                    </div>
-                    <div className="mt-4 flex gap-3 items-center text-white text-opacity-80 text-base font-normal ">
-                        <Mail /> <div>admin@thehomeverse.io</div>
+                        <Mail />{" "}
+                        <Link href={`mailto:kowalska1988@ukr.net `}>
+                            kowalska1988@ukr.net{" "}
+                        </Link>
                     </div>
                 </div>
                 <div>

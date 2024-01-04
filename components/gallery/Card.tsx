@@ -4,10 +4,14 @@ import React from "react";
 import BathRoom from "../Icons/BathRoom";
 import BedRoom from "../Icons/BedRoom";
 import { Fade } from "react-awesome-reveal";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
 interface ICard {
     card: {
         price: string;
-        image: string;
+        images: string[];
         id: number;
         room: { title: string; slug: string; icon: string };
         bathRoom: { title: string; slug: string; icon: string };
@@ -16,17 +20,32 @@ interface ICard {
 }
 
 const Card = ({ card }: ICard) => {
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
+    };
     return (
         <Fade duration={700} cascade damping={0.1}>
-            <div className="max-w-[577px] pb-3  bg-neutral-900  rounded-lg ">
+            <div className="gallery-card max-w-[577px] pb-3  bg-neutral-900  rounded-lg ">
                 <div className="relative z-10">
-                    <Image
-                        src={card.image}
-                        width={577}
-                        height={450}
-                        alt="image"
-                        className=" rounded-lg overflow-hidden"
-                    />
+                    <Slider {...settings}>
+                        {card.images.map((image, index) => (
+                            <div key={index}>
+                                <Image
+                                    src={image}
+                                    width={1077}
+                                    height={450}
+                                    alt="image"
+                                    className=" rounded-lg overflow-hidden"
+                                />
+                            </div>
+                        ))}
+                    </Slider>
 
                     <div className="w-[60px] h-full left-0 top-0 absolute bg-black bg-opacity-30 rounded-tr-lg rounded-br-lg" />
 

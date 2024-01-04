@@ -29,6 +29,7 @@ const SliderRender = () => {
                             width={750}
                             height={200}
                             alt={`kids-${slideIndex}`}
+                            loading="lazy"
                             className="border-[2px] lg:border-[4px] border-white rounded-xl"
                         />
                     </div>
