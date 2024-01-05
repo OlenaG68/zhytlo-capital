@@ -4,7 +4,7 @@ import Button from "../UI/Button";
 const Form = () => {
     return (
         <Fade direction="down">
-            <form className="flex flex-col gap-16">
+            <form className="flex flex-col gap-16 text-white ">
                 <div className="flex text-white flex-col md:flex-row gap-16 md:gap-4 w-full">
                     <input
                         type="text"
