@@ -1,6 +1,7 @@
 import React from "react";
 import FilterBtn from "./FilterBtn";
 import Card from "./Card";
+import Link from "next/link";
 
 const Gallery = () => {
     const cadrs = [
@@ -63,6 +64,20 @@ const Gallery = () => {
                 {cadrs.map((card) => (
                     <Card card={card} key={card.id} />
                 ))}
+            </div>
+            <div className="flex flex-col lg:flex-row justify-center pt-8 lg:pt-20 gap-4 items-center ">
+                <div className="text-white font-semibold text-xl text-center">
+                    Повний ескіз планування будинків, поверхів та квартир
+                </div>
+
+                <Link
+                    href="/plan.pdf"
+                    download
+                    className=" hover:bg-sky-600 cursor-pointer px-6 py-3 bg-sky-500 w-fit rounded-lg shadow justify-center items-center gap-2.5 flex text-white text-sm font-semibold  leading-tight"
+                    target="_blank"
+                >
+                    Скачати файл
+                </Link>
             </div>
         </div>
     );
