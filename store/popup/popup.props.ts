@@ -1,4 +1,4 @@
 export interface IPopupProps {
     currentPopup: string;
-    detailsData: {} | null;
+    apartId: number;
 }

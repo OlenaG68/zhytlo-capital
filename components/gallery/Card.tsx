@@ -10,7 +10,6 @@ import Slider from "react-slick";
 import useWindowSize from "@/helpers/useWindowSize";
 import { IPopupProps } from "@/store/popup/popup.props";
 import { ConnectedProps, connect } from "react-redux";
-
 interface ICard extends PropsFromRedux {
     card: {
         price: string;
@@ -22,7 +21,7 @@ interface ICard extends PropsFromRedux {
     };
 }
 
-const Card = ({ card, openPopup }: ICard) => {
+const Card = ({ card, openPopup, setApartId }: ICard) => {
     const windowSize = useWindowSize();
     const settings = {
         className: "slick-track",
@@ -36,6 +35,11 @@ const Card = ({ card, openPopup }: ICard) => {
         centerMode: true, // Add this line
         centerPadding: "0px",
         // arrows: windowSize.width! > 1023 ? true : false,
+    };
+
+    const openDetailsPopup = (id: number) => {
+        setApartId(id);
+        openPopup("details");
     };
     return (
         <Fade duration={700} cascade damping={0.1}>
@@ -69,27 +73,33 @@ const Card = ({ card, openPopup }: ICard) => {
                         {card.price}
                     </div>
                     <div
-                        onClick={() => openPopup("details")}
+                        onClick={() => openDetailsPopup(card.id)}
                         className=" cursor-pointer font-semibold text-white hover:from-orange-400 hover:to-purple-600 hover:scale-110 transition ease-in-out px-6 py-3 bg-gradient-to-r from-orange-300 to-purple-500 rounded-lg shadow justify-center items-center gap-2.5 inline-flex"
                     >
                         Деталі
                     </div>
                 </div>
                 <div className="mx-[15px] grid grid-cols-3 text-white divide-x rounded-lg border border-neutral-50 border-opacity-30 my-4">
-                    <div className="flex justify-center items-center gap-2 py-3">
+                    <div className="flex justify-center items-center gap-2 py-3 px-1">
                         <div>
                             <BedRoom />
                         </div>
-                        <div>{card.room.title}</div>
+                        <div className="text-xs  md:text-base">
+                            {card.room.title}
+                        </div>
                     </div>
-                    <div className=" flex justify-center items-center gap-2 py-3">
+                    <div className=" flex justify-center items-center gap-2 py-3 px-1">
                         <div>
                             <BathRoom />
                         </div>
-                        <div>{card.bathRoom.title}</div>
+                        <div className="text-xs  md:text-base">
+                            {card.bathRoom.title}
+                        </div>
                     </div>
-                    <div className="flex justify-center items-center gap-2 py-3">
-                        <div>{card.sq.number} м2</div>
+                    <div className="flex justify-center items-center gap-2 py-3 px-1">
+                        <div className="text-xs  md:text-base">
+                            {card.sq.number} м&sup2;
+                        </div>
                     </div>
                 </div>
             </div>
@@ -98,14 +108,18 @@ const Card = ({ card, openPopup }: ICard) => {
 };
 
 const mapState = ({ popup }: { popup: IPopupProps }) => {
-    const { currentPopup } = popup;
-    return { currentPopup };
+    const { currentPopup, apartId } = popup;
+    return { currentPopup, apartId };
 };
 
 const mapDispatch = {
     openPopup: (currentPopup: string) => ({
         type: "OPEN_POPUP",
         currentPopup,
+    }),
+    setApartId: (apartId: number) => ({
+        type: "SET_APART_ID",
+        apartId,
     }),
 };
 

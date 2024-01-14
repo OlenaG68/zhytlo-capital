@@ -2,7 +2,7 @@ import type { IPopupProps } from "./popup.props";
 
 const initStore: IPopupProps = {
     currentPopup: "",
-    detailsData: null,
+    apartId: 0,
 };
 
 export default initStore;

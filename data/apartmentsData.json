@@ -1,0 +1,97 @@
+[
+    {
+       
+            "id":1,
+            "description": "Короткий опис квартири на декілька речень.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+            "rooms":2,
+            "square_of_rooms": [
+                { "title": "Кухня", "numbers": "22,56" },
+                { "title": "Спальня", "numbers": "15,69" },
+                { "title": "Дитяча", "numbers": "14,10" },
+                { "title": "Коридор", "numbers": "6,86" },
+                { "title": "Ванна", "numbers": "3,48" },
+                { "title": "Туалет", "numbers": "1,65" },
+                { "title": "Балкон", "numbers": "7,79" },
+                { "title": "Загальна площа", "numbers": "66,68" }
+            ]
+       
+    },
+    {
+    
+            "id":2,
+            "description": "Короткий опис квартири на декілька речень.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+            "rooms":1,
+            "square_of_rooms": [{ "title": "Кухня", "numbers": "22,70" },
+            { "title": "Спальня", "numbers": "14,10" },
+            { "title": "Коридор", "numbers": "4,30" },
+            { "title": "Санвузол", "numbers": "4,93" },
+            { "title": "Балкон", "numbers": "5,14" },
+            { "title": "Загальна площа", "numbers": "47,57" }
+        ]
+       
+    },
+    {
+  
+            "id":3,
+            "description": "Короткий опис квартири на декілька речень.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+            "rooms":1,
+            "square_of_rooms": [{ "title": "Кухня", "numbers": "15,98" },
+            { "title": "Спальня", "numbers": "15,08" },
+            { "title": "Гардеробна", "numbers": "1,83" },
+            { "title": "Гардеробна", "numbers": "2,20" },
+            { "title": "Коридор", "numbers": "4,50" },
+            { "title": "Санвузол", "numbers": "5,43" },
+            { "title": "Балкон", "numbers": "7,90" },
+            { "title": "Загальна площа", "numbers": "47,39" }
+        ]
+        
+    },
+    {
+    
+            "id":4,
+            "description": "Короткий опис квартири на декілька речень.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+            "rooms":2,
+            "square_of_rooms": [
+                { "title": "Кухня", "numbers": "17,23" },
+            { "title": "Спальня", "numbers": "13,40" },
+            { "title": "Вітальня", "numbers": "16,00" },
+            { "title": "Коридор", "numbers": "7,62" },
+            { "title": "Санвузол", "numbers": "5,02" },
+            { "title": "Балкон", "numbers": "10,06" },
+            { "title": "Загальна площа", "numbers": "62,29" }]
+            
+            
+     
+    },
+    {
+       
+            "id":5,
+            "description": "Короткий опис квартири на декілька речень.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+            "rooms":1,
+            "square_of_rooms": [  { "title": "Кухня", "numbers": "17,73" },
+            { "title": "Спальня", "numbers": "17,45" },
+            { "title": "Коридор", "numbers": "3,82" },
+            { "title": "Санвузол", "numbers": "4,98" },
+            { "title": "Лоджія", "numbers": "4,50" },
+            { "title": "Загальна площа", "numbers": "48,48" }
+        ]
+     
+    },
+    {
+     
+            "id":6,
+            "description": "Короткий опис квартири на декілька речень.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+            "rooms":3,
+            "square_of_rooms": [ { "title": "Кухня", "numbers": "18,72" },
+            { "title": "Спальня", "numbers": "17,08" },
+            { "title": "Спальня", "numbers": "15,45" },
+            { "title": "Спальня", "numbers": "12,39" },
+            { "title": "Коридор", "numbers": "11,88" },
+            { "title": "Гардеробна", "numbers": "5,10" },
+            { "title": "Ванна", "numbers": "3,75" },
+            { "title": "Туалет", "numbers": "1,83" },
+            { "title": "Лоджія", "numbers": "5,67" },
+            { "title": "Загальна площа", "numbers": "89,03" }]
+       
+    }
+]
