@@ -12,7 +12,7 @@ const config: Config = {
         },
         extend: {
             backgroundImage: {
-                "first-block": 'url("/images/first-block3.jpg")',
+                "first-block": 'url("/images/first-block5.jpg")',
                 "about-us-block": 'url("/images/about-us.jpg")',
 
                 "gradient-conic":
