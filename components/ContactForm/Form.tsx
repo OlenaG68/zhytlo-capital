@@ -8,32 +8,8 @@ const Form = () => {
     const [mail, setMail] = useState("");
     const [phone, setPhone] = useState("");
     const [message, setMessage] = useState("");
-    const [success, setSuccess] = useState("");
-    // const handleFormData = (e: React.FormEvent<HTMLFormElement>) => {
-    //     console.log("1111");
-    //     e.preventDefault();
-    //     const data = {
-    //         name: `${name} ${lastName}`,
-    //         mail,
-    //         phone,
-    //         message,
-    //     };
-    //     // e.target.reset();
+    const [success, setSuccess] = useState(false);
 
-    //     try {
-    //         sendContactForm(data);
-    //         // setState(initState);
-    //         // setSuccess(true);
-    //         console.log("sdsdds");
-    //     } catch (error) {
-    //         // setState((prev) => ({
-    //         //     ...prev,
-    //         //     isLoading: false,
-    //         //     error: error.message,
-    //         // }));
-    //     }
-    //     console.log(data);
-    // };
     const handleFormData = async (e: React.FormEvent<HTMLFormElement>) => {
         const data = {
             name: `${name} ${lastName}`,
@@ -50,7 +26,12 @@ const Form = () => {
             },
             body: JSON.stringify(data),
         });
-        console.log(await response.json());
+        setName("");
+        setLastName("");
+        setMail("");
+        setPhone("");
+        setMessage("");
+        setSuccess(true);
     };
     return (
         <Fade direction="down">
@@ -63,12 +44,14 @@ const Form = () => {
                         type="text"
                         className="bg-transparent border-b w-full border-white outline-none"
                         placeholder="Ім'я"
+                        value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
                     <input
                         type="text"
                         className="bg-transparent border-b w-full border-white outline-none"
                         placeholder="Прізвище"
+                        value={lastName}
                         onChange={(e) => setLastName(e.target.value)}
                     />
                 </div>
@@ -76,20 +59,29 @@ const Form = () => {
                     type="text"
                     className="bg-transparent border-b border-white outline-none"
                     placeholder="Номер телефону"
+                    value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                 />
                 <input
                     type="text"
                     className="bg-transparent border-b border-white outline-none"
                     placeholder="E-mail"
+                    value={mail}
                     onChange={(e) => setMail(e.target.value)}
                 />
-                <input
-                    type="text"
-                    className="bg-transparent border-b border-white outline-none"
-                    placeholder="Повідомлення"
-                    onChange={(e) => setMessage(e.target.value)}
-                />
+                <div className="w-full">
+                    <input
+                        type="text"
+                        className="bg-transparent w-full border-b border-white outline-none"
+                        placeholder="Повідомлення"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                    />
+                    <div className="text-neutral-50  text-xs mt-3">
+                        {success && "Дякуємо, ваш запит надіслано"}
+                    </div>
+                </div>
+
                 <Button title="Надіслати" type="submit" />
             </form>
         </Fade>
