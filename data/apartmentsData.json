@@ -2,7 +2,7 @@
     {
        
             "id":1,
-            "description": "Короткий опис квартири на декілька речень.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+            "description": "Функціональна, простора двокімнатна  квартира з двома спальнями, кухнею та великим балконом. ",
             "rooms":2,
             "square_of_rooms": [
                 { "title": "Кухня", "numbers": "22,56" },
@@ -19,7 +19,7 @@
     {
     
             "id":2,
-            "description": "Короткий опис квартири на декілька речень.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+            "description": "Простора, лаконічна та світла однокімнатна квартира з панорамними вікнами, кухнею студією, спальнею та  балконом.",
             "rooms":1,
             "square_of_rooms": [{ "title": "Кухня", "numbers": "22,70" },
             { "title": "Спальня", "numbers": "14,10" },
@@ -33,7 +33,7 @@
     {
   
             "id":3,
-            "description": "Короткий опис квартири на декілька речень.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+            "description": "Функціональна однокімнатна квартира з великим балконом, який можна перетворити на лаунж-зону, двома гардеробними, кухнею студією, спальнею, та  балконом.",
             "rooms":1,
             "square_of_rooms": [{ "title": "Кухня", "numbers": "15,98" },
             { "title": "Спальня", "numbers": "15,08" },
@@ -49,7 +49,7 @@
     {
     
             "id":4,
-            "description": "Короткий опис квартири на декілька речень.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+            "description": "Простора та світла двокімнатна квартира з двома спальнями,  величезним балконом з двома виходами, кухнею студією, та великим коридором.",
             "rooms":2,
             "square_of_rooms": [
                 { "title": "Кухня", "numbers": "17,23" },
@@ -66,7 +66,7 @@
     {
        
             "id":5,
-            "description": "Короткий опис квартири на декілька речень.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+            "description": "Лаконічна та  прагматична однокімнатна квартира, зі спальнею, кухнею-студією, та затишною лоджією.",
             "rooms":1,
             "square_of_rooms": [  { "title": "Кухня", "numbers": "17,73" },
             { "title": "Спальня", "numbers": "17,45" },
@@ -80,7 +80,7 @@
     {
      
             "id":6,
-            "description": "Короткий опис квартири на декілька речень.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+            "description": "Простора та функціональна трикімнатна квартира з трьома великими спальнями, кухнею-студією, гардеробною та великою лоджією для релакс зони.",
             "rooms":3,
             "square_of_rooms": [ { "title": "Кухня", "numbers": "18,72" },
             { "title": "Спальня", "numbers": "17,08" },
