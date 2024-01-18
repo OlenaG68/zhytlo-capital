@@ -1,14 +1,22 @@
 "use client";
 import React, { useState } from "react";
+interface IFilter {
+    onSelectFilter: (value: string) => void;
+}
 
-const FilterBtn = () => {
+const FilterBtn = ({ onSelectFilter }: IFilter) => {
     const [activeBtn, setActiveBtn] = useState("all");
     const filterBtn = [
-        { title: "All", id: 1, slug: "all" },
-        { title: "Studio", id: 1, slug: "studio" },
-        { title: "1 Room", id: 1, slug: "one-room" },
-        { title: "2 Rooms", id: 1, slug: "two-rooms" },
+        { title: "Всі", id: 1, slug: "all" },
+        { title: "1 Кімната", id: 1, slug: "one-room" },
+        { title: "2 Кімнати", id: 1, slug: "two-rooms" },
+        { title: "3 Кімнати", id: 1, slug: "three-rooms" },
     ];
+
+    const btnClick = (slug: string) => {
+        onSelectFilter(slug);
+        setActiveBtn(slug);
+    };
     return (
         <div className=" flex gap-6 flex-wrap items-center justify-center">
             {filterBtn.map((btn) => (
@@ -19,7 +27,7 @@ const FilterBtn = () => {
                             ? "border-sky-500"
                             : "border-white"
                     }`}
-                    onClick={() => setActiveBtn(btn.slug)}
+                    onClick={() => btnClick(btn.slug)}
                 >
                     <div
                         className={` text-sm font-semibold  leading-tight ${

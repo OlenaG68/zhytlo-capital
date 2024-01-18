@@ -1,12 +1,15 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import FilterBtn from "./FilterBtn";
 import Card from "./Card";
 import Link from "next/link";
 
 const Gallery = () => {
+    const [filter, setFilter] = useState("all");
     const cadrs = [
         {
             price: "100$",
+            slug: "two-rooms",
             images: ["/images/gallery/1.jpg", "/images/plan/1.jpg"],
             id: 1,
             room: { title: "2 Кімнати", slug: "one-bed-room", icon: "" },
@@ -19,6 +22,7 @@ const Gallery = () => {
         },
         {
             price: "1003$",
+            slug: "one-room",
             images: ["/images/gallery/2.jpg", "/images/plan/2.jpg"],
             id: 2,
             room: { title: "1 Кімната", slug: "one-bed-room", icon: "" },
@@ -27,6 +31,7 @@ const Gallery = () => {
         },
         {
             price: "1004$",
+            slug: "one-room",
             images: ["/images/gallery/3.jpg", "/images/plan/3.jpg"],
             id: 3,
             room: { title: "1 Кімната", slug: "one-bed-room", icon: "" },
@@ -35,6 +40,7 @@ const Gallery = () => {
         },
         {
             price: "1005$",
+            slug: "two-rooms",
             images: ["/images/gallery/4.jpg", "/images/plan/4.jpg"],
             id: 4,
             room: { title: "2 Кімнати", slug: "one-bed-room", icon: "" },
@@ -43,6 +49,7 @@ const Gallery = () => {
         },
         {
             price: "100$",
+            slug: "one-room",
             images: ["/images/gallery/5.jpg", "/images/plan/5.jpg"],
             id: 5,
             room: { title: "1 Кімната", slug: "one-bed-room", icon: "" },
@@ -51,6 +58,7 @@ const Gallery = () => {
         },
         {
             price: "1060$",
+            slug: "three-rooms",
             images: ["/images/gallery/6.jpg", "/images/plan/6.jpg"],
             id: 6,
             room: { title: "3 Кімнати", slug: "three-bed-room", icon: "" },
@@ -62,14 +70,23 @@ const Gallery = () => {
             sq: { number: 89.03, icon: "" },
         },
     ];
+    const handleFilterChange = (newFilter: string) => {
+        setFilter(newFilter);
+    };
+    const filteredCadrs = cadrs.filter((card) => {
+        if (filter === "all") {
+            return true;
+        }
+        return card.slug === filter;
+    });
     return (
         <div className="container px-3 pb-16">
             <div id="gallery" className="pt-32 flex  justify-center">
-                <FilterBtn />
+                <FilterBtn onSelectFilter={handleFilterChange} />
             </div>
 
             <div className="flex justify-center  flex-col md:flex-row md:flex-wrap gap-4 mt-8 pb-4">
-                {cadrs.map((card) => (
+                {filteredCadrs.map((card) => (
                     <Card card={card} key={card.id} />
                 ))}
             </div>

@@ -90,7 +90,10 @@ const Header = () => {
                         </div>
                     ))}
 
-                    <Button title="Напишіть нам!" />
+                    <Button
+                        title="Напишіть нам!"
+                        onClick={() => scrollElementToView("contact")}
+                    />
                 </div>
                 <div ref={mobMenuRef} className="block md:hidden">
                     <MobMenu onClick={() => setOpenMobMenu(true)} />
