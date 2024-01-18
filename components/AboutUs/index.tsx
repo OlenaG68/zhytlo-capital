@@ -105,10 +105,10 @@ const AboutUs = () => {
                         {advantages.map((item, index) => (
                             <Fade direction="up" key={index}>
                                 <div className="flex flex-col justify-center items-center text-center">
-                                    <div className="text-center text-sky-500 text-opacity-80 text-[48px] font-semibold ">
+                                    <div className="text-center text-sky-400 text-opacity-80 text-[48px] font-semibold ">
                                         {item.number}
                                     </div>
-                                    <div className="text-center text-neutral-50 text-opacity-60 text-lg font-semibold">
+                                    <div className="text-center text-neutral-50  text-lg font-semibold">
                                         {item.title}
                                     </div>
                                     {/* <div className="w-[276px] text-center text-neutral-50 text-opacity-50 text-base font-normal">
@@ -124,10 +124,10 @@ const AboutUs = () => {
                 {places.map((place, index) => (
                     <Fade direction="up" key={index}>
                         <div className="flex flex-col">
-                            <div className=" text-sky-500 text-opacity-80 text-[16px] font-semibold ">
+                            <div className=" text-sky-400 text-opacity-80 text-[16px] font-semibold ">
                                 {place.title}
                             </div>
-                            <div className="text-neutral-50 text-opacity-60 text-xs mt-4 ">
+                            <div className="text-neutral-50  text-xs mt-4 ">
                                 {Array.isArray(place.desc) ? (
                                     <div className="flex gap-6">
                                         {place.desc.map((item) => (
