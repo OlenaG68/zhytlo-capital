@@ -62,7 +62,7 @@ const AboutUs = () => {
 
         {
             title: "Гіпермаркет “Епіцентр”",
-            desc: [{ number: 13, icon: <Walk /> }],
+            desc: [{ number: 13, icon: <Car /> }],
         },
     ];
     return (
