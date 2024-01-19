@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import Button from "../UI/Button";
-import InputMask from "react-input-mask";
+
 const Form = () => {
     const [name, setName] = useState("");
     const [lastName, setLastName] = useState("");
