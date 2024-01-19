@@ -35,14 +35,14 @@ const Footer = () => {
                     </div> */}
                     <div className="mt-4 flex gap-3 items-center text-white text-opacity-80 text-base font-normal ">
                         <Phone />{" "}
-                        <Link href={`tel:+38 097 474 31 86`}>
-                            +38 097 474 31 86
+                        <Link href={`tel:+380 98 237 2222`}>
+                            +380 98 237 2222
                         </Link>
                     </div>
                     <div className="mt-4 flex gap-3 items-center text-white text-opacity-80 text-base font-normal ">
                         <Mail />{" "}
-                        <Link href={`mailto:kowalska1988@ukr.net `}>
-                            kowalska1988@ukr.net{" "}
+                        <Link href={`mailto:zhytlo.kapital@gmail.com`}>
+                            zhytlo.kapital@gmail.com
                         </Link>
                     </div>
                 </div>
