@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Button from "../UI/Button";
+
 import { Fade } from "react-awesome-reveal";
 import Car from "../Icons/Car";
 import Walk from "../Icons/Walk";
