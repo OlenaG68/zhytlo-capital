@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import PopupWrapper from "@/components/popups/PopupWrapper";
 import ApartamentsDetailPopup from "@/components/popups/ApartamentsDetailPopup";
 import ReduxProvider from "@/store/ReduxProvider";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
                     <ApartamentsDetailPopup />
                 </body>
             </ReduxProvider>
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALITICS!} />
         </html>
     );
 }

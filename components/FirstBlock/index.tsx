@@ -4,6 +4,7 @@ import React, { useState } from "react";
 
 const FirstBlock = () => {
     const [showTextOne, setShowTextOne] = useState(0);
+
     return (
         <section
             id="home"
@@ -13,8 +14,8 @@ const FirstBlock = () => {
                 <h1 className=" text-3xl text-center m-auto mt-36 md:mt-40  md:text-[45px]  lg:text-[64px] max-w-[859px] font-bold leading-snug  text-neutral-50">
                     <TypeAnimation
                         sequence={[
-                            "Знайди житло своєї мрії у", // Types 'One'
-                            300, // Waits 1s
+                            "Знайди житло своєї мрії у",
+                            300,
                             () => {
                                 setShowTextOne(1);
                             },
