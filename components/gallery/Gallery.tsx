@@ -80,7 +80,7 @@ const Gallery = () => {
         return card.slug === filter;
     });
     return (
-        <div className="container px-3 pb-16">
+        <section className="container px-3 pb-16">
             <div id="gallery" className="pt-32 flex  justify-center">
                 <FilterBtn onSelectFilter={handleFilterChange} />
             </div>
@@ -104,7 +104,7 @@ const Gallery = () => {
                     Скачати файл
                 </Link>
             </div>
-        </div>
+        </section>
     );
 };
 

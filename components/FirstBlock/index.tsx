@@ -4,14 +4,13 @@ import React, { useState } from "react";
 
 const FirstBlock = () => {
     const [showTextOne, setShowTextOne] = useState(0);
-    const [showTextTwo, setShowTextTwo] = useState(0);
     return (
-        <div
+        <section
             id="home"
             className="h-screen w-full bg-first-block bg-cover bg-no-repeat bg-center flex   pt-32  md:pt-0"
         >
             <div className="container px-3 md:pl-0">
-                <div className=" text-3xl text-center m-auto mt-36 md:mt-40  md:text-[45px]  lg:text-[64px] max-w-[859px] font-bold leading-snug  text-neutral-50">
+                <h1 className=" text-3xl text-center m-auto mt-36 md:mt-40  md:text-[45px]  lg:text-[64px] max-w-[859px] font-bold leading-snug  text-neutral-50">
                     <TypeAnimation
                         sequence={[
                             "Знайди житло своєї мрії у", // Types 'One'
@@ -48,9 +47,9 @@ const FirstBlock = () => {
                     )} */}
                     {/* Find Your <span className="text-sky-500">Dream Home</span>{" "}
                     with Crypto */}
-                </div>
+                </h1>
             </div>
-        </div>
+        </section>
     );
 };
 

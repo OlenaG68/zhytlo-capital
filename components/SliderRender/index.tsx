@@ -22,7 +22,7 @@ const SliderRender = () => {
         dots: windowSize.width! > 1023 ? false : true,
     };
     return (
-        <div className="w-[90%] m-auto  lg:pt-16 pb-28">
+        <section className="w-[90%] m-auto  lg:pt-16 pb-28">
             <Slider {...settings}>
                 {[1, 2, 4, 5].map((slideIndex) => (
                     <div key={slideIndex} className="py-24 px-4 lg:px-8">
@@ -37,7 +37,7 @@ const SliderRender = () => {
                     </div>
                 ))}
             </Slider>
-        </div>
+        </section>
     );
 };
 

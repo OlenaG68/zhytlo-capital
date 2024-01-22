@@ -66,7 +66,7 @@ const AboutUs = () => {
         },
     ];
     return (
-        <div
+        <section
             id="about-us"
             className=" bg-about-us-block bg-cover bg-center bg-no-repeat  relative"
         >
@@ -74,9 +74,9 @@ const AboutUs = () => {
             <div className="container flex flex-col lg:flex-row gap-20 items-center justify-between pt-[137px]">
                 <div className="flex flex-col gap-4 px-3 md:px-0 max-w-[666px] relative z-20 justify-center items-center md:items-start text-center md:text-left">
                     <Fade direction="left">
-                        <div className="text-sky-500 text-[32px] font-semibold">
+                        <h1 className="text-sky-500 text-[32px] font-semibold">
                             Про нас
-                        </div>
+                        </h1>
                     </Fade>
                     <Fade direction="left" delay={300}>
                         <div className=" text-neutral-50 text-base font-normal mb-">
@@ -108,9 +108,9 @@ const AboutUs = () => {
                                     <div className="text-center text-sky-400 text-opacity-80 text-[48px] font-semibold ">
                                         {item.number}
                                     </div>
-                                    <div className="text-center text-neutral-50  text-lg font-semibold">
+                                    <h3 className="text-center text-neutral-50  text-lg font-semibold">
                                         {item.title}
-                                    </div>
+                                    </h3>
                                     {/* <div className="w-[276px] text-center text-neutral-50 text-opacity-50 text-base font-normal">
                                     {item.desc}
                                 </div> */}
@@ -124,9 +124,9 @@ const AboutUs = () => {
                 {places.map((place, index) => (
                     <Fade direction="up" key={index}>
                         <div className="flex flex-col">
-                            <div className=" text-sky-400 text-opacity-80 text-[16px] font-semibold ">
+                            <h3 className=" text-sky-400 text-opacity-80 text-[16px] font-semibold ">
                                 {place.title}
-                            </div>
+                            </h3>
                             <div className="text-neutral-50  text-xs mt-4 ">
                                 {Array.isArray(place.desc) ? (
                                     <div className="flex gap-6">
@@ -152,7 +152,7 @@ const AboutUs = () => {
                     </Fade>
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 
