@@ -3,6 +3,8 @@ import Phone from "../Icons/Phone";
 import Mail from "../Icons/Mail";
 import Link from "next/link";
 import Image from "next/image";
+import Instagram from "../Icons/Instagram";
+import FaceBook from "../Icons/FaceBook";
 
 const Footer = () => {
     return (
@@ -51,9 +53,18 @@ const Footer = () => {
                         Follow Us
                     </div>
                     <div className="flex text-white gap-14 mt-4">
-                        <div>Inst</div>
-                        <div>FB</div>
-                        <div>T</div>
+                        <Link
+                            href="https://www.instagram.com/zhytlo_kapital?igsh=eWRrMWs0YnVpYmEw"
+                            target="_blank"
+                        >
+                            <Instagram />
+                        </Link>
+                        <Link
+                            href="https://www.facebook.com/profile.php?id=61555882618723"
+                            target="_blank"
+                        >
+                            <FaceBook />
+                        </Link>
                     </div>
                 </div>
             </div>
