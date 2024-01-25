@@ -28,8 +28,8 @@ const AboutUs = () => {
             desc: "24/7 Help service for all customers to guide and support",
         },
         {
-            number: "65",
-            title: "Паркінг",
+            number: "90",
+            title: "Парккомісць",
             desc: "24/7 Help service for all customers to guide and support",
         },
     ];
