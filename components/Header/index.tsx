@@ -25,30 +25,21 @@ const Header = () => {
         scrollElementToView(slug);
         setOpenMobMenu(false);
     };
-    const checkVisibleBlock = () => {
-        window.scrollY >= 500 ? setNavBg(true) : setNavBg(false);
-        navLink.forEach((tab) => {
+    const checkVisibleBlock = (): void => {
+        setNavBg(window.scrollY >= 500);
+
+        for (const tab of navLink) {
             const element = document.getElementById(tab.slug);
-            if (!element) return;
+            if (!element) continue;
 
             const rect = element.getBoundingClientRect();
-            const isVisible =
-                rect.top >= 0 && rect.bottom <= window.innerHeight;
+            const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
 
             if (isVisible) {
-                const findedTab = navLink.find(
-                    (tabMain) => tabMain.slug === tab.slug
-                );
-
-                if (!findedTab) {
-                    return;
-                }
-
-                setActiveTab(findedTab.slug);
-
-                return;
+                setActiveTab(tab.slug);
+                break; // Зупиняємо цикл, як тільки знаходимо видимий блок
             }
-        });
+        }
     };
 
     useEffect(() => {
@@ -70,8 +61,8 @@ const Header = () => {
                 <div className=" text-white">
                     <Image
                         src="/logo/logo.png"
-                        width={80}
-                        height={60}
+                        width={300}
+                        height={35}
                         alt="logo"
                     />
                 </div>

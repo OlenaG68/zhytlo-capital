@@ -8,7 +8,7 @@ const Gallery = () => {
     const [filter, setFilter] = useState("all");
     const cadrs = [
         {
-            price: "100$",
+            price: "1200$",
             slug: "two-rooms",
             images: ["/images/gallery/1.jpg", "/images/plan/1.jpg"],
             id: 1,
@@ -21,7 +21,7 @@ const Gallery = () => {
             sq: { number: 66.68, icon: "" },
         },
         {
-            price: "1003$",
+            price: "1300$",
             slug: "one-room",
             images: ["/images/gallery/2.jpg", "/images/plan/2.jpg"],
             id: 2,
@@ -30,7 +30,7 @@ const Gallery = () => {
             sq: { number: 47.57, icon: "" },
         },
         {
-            price: "1004$",
+            price: "1300$",
             slug: "one-room",
             images: ["/images/gallery/3.jpg", "/images/plan/3.jpg"],
             id: 3,
@@ -39,7 +39,7 @@ const Gallery = () => {
             sq: { number: 47.39, icon: "" },
         },
         {
-            price: "1005$",
+            price: "1200$",
             slug: "two-rooms",
             images: ["/images/gallery/4.jpg", "/images/plan/4.jpg"],
             id: 4,
@@ -48,7 +48,7 @@ const Gallery = () => {
             sq: { number: 62.29, icon: "" },
         },
         {
-            price: "100$",
+            price: "1300$",
             slug: "one-room",
             images: ["/images/gallery/5.jpg", "/images/plan/5.jpg"],
             id: 5,
@@ -57,7 +57,7 @@ const Gallery = () => {
             sq: { number: 48.48, icon: "" },
         },
         {
-            price: "1060$",
+            price: "1100$",
             slug: "three-rooms",
             images: ["/images/gallery/6.jpg", "/images/plan/6.jpg"],
             id: 6,

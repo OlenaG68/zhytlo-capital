@@ -11,6 +11,10 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+    icons: {
+        icon: ["/favicon/favicon-32x32.png"],
+        apple: ["/favicon/apple-touch-icon.png"],
+    },
     title: "Житло твоєї мрії",
     description:
         "SummerStone - малоповерхове житло у Львові. Купуй квартиру в сучасній новобудові у Львові, з явними перевагами в розташуванні та плануванні",
