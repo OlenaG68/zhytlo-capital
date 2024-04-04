@@ -50,7 +50,7 @@ const Footer = () => {
                 </div>
                 <div>
                     <div className="text-white text-2xl font-semibold">
-                        Follow Us
+                        Слідкуйте за нами
                     </div>
                     <div className="flex text-white gap-14 mt-4">
                         <Link
