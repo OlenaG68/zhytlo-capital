@@ -28,7 +28,7 @@ const AboutUs = () => {
             desc: "24/7 Help service for all customers to guide and support",
         },
         {
-            number: "90",
+            number: "92",
             title: "Паркомісць",
             desc: "24/7 Help service for all customers to guide and support",
         },
