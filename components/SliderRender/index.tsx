@@ -24,7 +24,7 @@ const SliderRender = () => {
     return (
         <section className="w-[90%] m-auto  lg:pt-16 pb-28">
             <Slider {...settings}>
-                {[1, 2, 4, 5, 8].map((slideIndex) => (
+                {[1, 2, 4, 5, 3, 8].map((slideIndex) => (
                     <div key={slideIndex} className="py-24 px-4 lg:px-8">
                         <Image
                             src={`/images/renders/${slideIndex}.jpg`}
