@@ -79,7 +79,7 @@ const VideoBlock = () => {
                     </div>
 
                     <Link
-                        href="/plan.pdf"
+                        href="/genplan.pdf"
                         download
                         className=" hover:bg-sky-600 cursor-pointer px-6 py-3 bg-sky-500 w-fit rounded-lg shadow justify-center items-center gap-2.5 flex text-white text-sm font-semibold  leading-tight"
                         target="_blank"
