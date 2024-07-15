@@ -90,7 +90,7 @@ const Gallery = () => {
                     <Card card={card} key={card.id} />
                 ))}
             </div>
-            <div className="flex flex-col lg:flex-row justify-center pt-8 lg:pt-20 gap-4 items-center ">
+            {/* <div className="flex flex-col lg:flex-row justify-center pt-8 lg:pt-20 gap-4 items-center ">
                 <div className="text-white font-semibold text-xl text-center">
                     Повний ескіз планування будинків, поверхів та квартир
                 </div>
@@ -103,7 +103,7 @@ const Gallery = () => {
                 >
                     Скачати файл
                 </Link>
-            </div>
+            </div> */}
         </section>
     );
 };

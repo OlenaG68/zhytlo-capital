@@ -69,7 +69,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="px-3 md:px-0 text-center pt-8 pb-16 border-t text-white border-neutral-50 border-opacity-30">
-                © 2022 WebDes | All Rights Reserved
+                © 2024 Hrynykha Web | All Rights Reserved
             </div>
         </div>
     );
