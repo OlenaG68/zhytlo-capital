@@ -7,6 +7,7 @@ import PopupWrapper from "@/components/popups/PopupWrapper";
 import ApartamentsDetailPopup from "@/components/popups/ApartamentsDetailPopup";
 import ReduxProvider from "@/store/ReduxProvider";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,12 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
+            <Head>
+                {" "}
+                <GoogleAnalytics
+                    gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALITICS!}
+                />
+            </Head>
             <ReduxProvider>
                 <body className={inter.className}>
                     <Header />
@@ -35,7 +42,6 @@ export default function RootLayout({
                     <ApartamentsDetailPopup />
                 </body>
             </ReduxProvider>
-            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALITICS!} />
             <GoogleTagManager gtmId="AW-16622292795" />
         </html>
     );
