@@ -28,12 +28,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <Head>
-                {" "}
-                <GoogleAnalytics
-                    gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALITICS!}
-                />
-            </Head>
+            <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG!} />
             <ReduxProvider>
                 <body className={inter.className}>
                     <Header />
@@ -42,7 +37,7 @@ export default function RootLayout({
                     <ApartamentsDetailPopup />
                 </body>
             </ReduxProvider>
-            <GoogleTagManager gtmId="AW-16622292795" />
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALITICS!} />
         </html>
     );
 }
