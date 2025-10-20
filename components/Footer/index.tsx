@@ -14,8 +14,8 @@ const Footer = () => {
                     <div className="text-white">
                         <Image
                             src="/logo/logo1.png"
-                            width={180}
-                            height={160}
+                            width={480}
+                            height={360}
                             alt="logo"
                             className="m-auto"
                         />
